@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mesa de Servicio</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: "Poppins", sans-serif;
+            background: url('https://png.pngtree.com/thumb_back/fw800/background/20210126/pngtree-copy-space-purple-circuits-digital-background-image_542426.jpg') 
+            no-repeat center center fixed;
+            background-size: cover;
+
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .card {
+            background: rgba(0, 0, 0, 0.60);
+            width: 380px;
+            padding: 30px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 0 25px rgba(255,255,255,0.3);
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+
+        .card h2 {
+            margin-bottom: 15px;
+            font-size: 28px;
+            color: #00eaff;
+            text-shadow: 0 0 10px #00eaff;
+        }
+
+        .card p {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        .btn {
+            margin-top: 20px;
+            background: #00eaff;
+            color: #000;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+            transition: 0.3s;
+            display: block;
+            width: 100%;
+        }
+
+        .btn:hover {
+            background: #fff;
+            transform: scale(1.05);
+        }
+
+        .btn-secondary {
+            background: #ffffff;
+            margin-top: 15px;
+        }
+
+        .btn-secondary:hover {
+            background: #00eaff;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h2>MESA DE SERVICIO</h2>
+
+    <p>Abra el archivo Excel con macros para revisar el trabajo.</p>
+
+    <!-- Botón que abre el .XLSM -->
+    <button class="btn" onclick="openExcel()">
+        📂 ABRIR ARCHIVO
+    </button>
+
+    <!-- Botón para volver al inicio -->
+    <button class="btn btn-secondary" onclick="goHome()">
+        ⬅️ VOLVER
+    </button>
+</div>
+
+<script>
+function openExcel() {
+    const file = encodeURI('MESA DE SERVICIO.xlsm');
+    window.location.href = file;
+}
+
+function goHome() {
+    // Cambia "index.html" si tu página principal tiene otro nombre
+    window.location.href = "index.html";
+}
+</script>
+
+</body>
+</html>
+
+
+
+

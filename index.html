@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MENU PRINCIPAL</title>
+
+    <!-- ÍCONOS PROFESIONALES -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: "Poppins", Arial, sans-serif;
+            background: url('https://img.freepik.com/vector-premium/fondo-morado-fondo-morado-palabra-cibernetico_42077-16457.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .overlay {
+            background: rgba(0, 0, 0, 0.55);
+            min-height: 100vh;
+            width: 100%;
+        }
+
+        header {
+            padding: 80px 20px;
+            background: rgba(0, 0, 0, 0.35);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 25px rgba(0,0,0,0.6);
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+        }
+
+        h1 {
+            font-size: 3.8rem;
+            letter-spacing: 4px;
+            font-weight: 700;
+            text-shadow: 0 0 25px rgba(255, 255, 255, 0.7);
+        }
+
+        /* CONTENEDOR */
+        .container {
+            max-width: 900px;
+            margin: 60px auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 35px;  /* SEPARACIÓN ENTRE TARJETAS */
+            justify-items: center;
+            padding-bottom: 80px;
+        }
+
+        /* TARJETAS CUADRADAS */
+        .card {
+            background: rgba(255, 255, 255, 0.12);
+            width: 300px;
+            height: 300px; /* HACERLA CUADRADA */
+            padding: 25px;
+            border-radius: 18px;
+            backdrop-filter: blur(14px);
+            box-shadow: 0 0 25px rgba(255, 255, 255, 0.25);
+            transition: transform 0.35s, box-shadow 0.35s, background 0.35s;
+            font-size: 1.3rem;
+            letter-spacing: 1.1px;
+            cursor: pointer;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.25);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .card i {
+            font-size: 3.5rem;
+            margin-bottom: 5px;
+            text-shadow: 0 0 10px rgba(255,255,255,0.8);
+        }
+
+        .card:hover {
+            transform: translateY(-10px) scale(1.05);
+            background: rgba(255, 255, 255, 0.22);
+            box-shadow: 0 0 40px rgba(255, 255, 255, 0.8);
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="overlay">
+        <header>
+            <h1>MENU PRINCIPAL</h1>
+        </header>
+
+        <div class="container">
+            
+            <a href="taller software.html">
+                <div class="card">
+                    <i class="fa-solid fa-laptop-code"></i>
+                    1. TALLER DE SOFTWARE
+                </div>
+            </a>
+
+            <a href="tipos de software.html">
+                <div class="card">
+                    <i class="fa-solid fa-folder-tree"></i>
+                    2. TIPOS DE SOFTWARE Y SISTEMA DE ARCHIVO
+                </div>
+            </a>
+
+            <a href="sistema operativo.html">
+                <div class="card">
+                    <i class="fa-solid fa-microchip"></i>
+                    3. SISTEMA OPERATIVO - VENTAJAS, EVOLUCIÓN, ECONOMÍA
+                </div>
+            </a>
+
+            <a href="taller sistemas.html">
+                <div class="card">
+                    <i class="fa-solid fa-gears"></i>
+                    4. TALLER SISTEMA OPERATIVO VIRTUAL / REAL
+                </div>
+            </a>
+
+            <a href="informe.html">
+                <div class="card">
+                    <i class="fa-solid fa-download"></i>
+                    5. TUTORIAL DE INSTALADORES
+                </div>
+            </a>
+
+            <a href="mesa de servicio.html">
+                <div class="card">
+                    <i class="fa-solid fa-headset"></i>
+                    6. MESA DE SERVICIO
+                </div>
+            </a>
+
+        </div>
+    </div>
+</body>
+</html>

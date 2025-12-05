@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>taller sistemas</title>
+    <style>
+        /* Fondo completo */
+        body {
+            margin: 0;
+            font-family: "Poppins", sans-serif;
+            background: url('https://cdn.fondospantallahd.com/2025/04/6EYOHyzd-Fondos-de-Pantalla-Morados-27.webp') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: -1;
+        }
+
+        .overlay {
+            max-width: 1200px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 40px;
+            text-shadow: 0 0 25px rgba(255,255,255,0.8);
+        }
+
+        /* GRID: tarjetas separadas y cuadradas */
+        .grid {
+            display: grid;
+            gap: 30px;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        }
+
+        .card {
+            background: rgba(50, 0, 80, 0.65);
+            padding: 25px 30px;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(150,50,200,0.5);
+            transition: 0.3s;
+            min-height: 240px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 30px rgba(200,100,255,0.6);
+        }
+
+        .card h2 {
+            font-size: 1.8rem;
+            color: #ffb8ff;
+            margin-bottom: 12px;
+        }
+
+        .card ul {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-left: 20px;
+            flex: 1;
+        }
+
+        .botones {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .boton {
+            display: inline-block;
+            padding: 18px 35px;
+            border-radius: 12px;
+            background: rgba(180,100,255,0.25);
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-decoration: none;
+            text-transform: uppercase;
+            border: 2px solid #be95ff;
+            box-shadow: 0 0 20px rgba(180,100,255,0.4);
+            transition: 0.3s;
+        }
+
+        .boton:hover {
+            background: rgba(180,100,255,0.45);
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(220,150,255,0.7);
+        }
+
+        /* Quiz */
+        #quiz-container {
+            background: rgba(80, 0, 120, 0.75);
+            padding: 25px 30px;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(200,100,255,0.6);
+            margin-top: 30px;
+        }
+
+        #quiz-container h2 {
+            color: #ffb8ff;
+            text-shadow: 0 0 10px #c59bff;
+        }
+
+        #question {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+
+        #options button {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            background: #9b59b6;
+            color: #fff;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        #options button:hover {
+            background: #c59bff;
+        }
+
+        #message {
+            margin-top: 10px;
+            font-size: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            .card h2 { font-size: 1.4rem; }
+            .boton { font-size: 1rem; padding: 15px 25px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="overlay">
+    <h1>Taller Software – Requisitos e Instalación</h1>
+
+    <div class="grid">
+        <!-- CARD 1 -->
+        <div class="card">
+            <h2>💻 Requisitos mínimos en máquina virtual</h2>
+            <ul>
+                <li>Windows XP: CPU 300 MHz, RAM 256 MB, Disco 10 GB</li>
+                <li>Windows 7: CPU 1 GHz, RAM 1-2 GB, Disco 16-20 GB</li>
+                <li>Windows 8/10: CPU 1 GHz con PAE/NX/SSE2, RAM 1-2 GB, Disco 16-20 GB</li>
+                <li>Windows 11: CPU 1 GHz, 2 núcleos, RAM 4 GB, Disco 64 GB</li>
+                <li>Ubuntu 22.04 LTS: CPU 2 GHz dual core, RAM 4 GB, Disco 25 GB</li>
+            </ul>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="card">
+            <h2>📂 Compartir carpetas en Windows</h2>
+            <ul>
+                <li>En VirtualBox, menú Dispositivos → Carpetas compartidas → Configuración</li>
+                <li>Agregar carpeta → seleccionar ruta → Montar automáticamente y Hacer permanente</li>
+                <li>Instalar Guest Additions si no está instalado</li>
+                <li>Acceder desde Red → VBOXSVR en Windows virtual</li>
+            </ul>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="card">
+            <h2>🖥 Diferencia instalación XP vs versiones nuevas</h2>
+            <ul>
+                <li>XP: instalación en pantalla azul, modo texto, particiones con teclado</li>
+                <li>Windows 7/8/10/11: interfaz gráfica, particiones con mouse, guía paso a paso</li>
+            </ul>
+        </div>
+
+        <!-- CARD 4 -->
+        <div class="card">
+            <h2>📑 Instalación de Office</h2>
+            <ul>
+                <li>Acceder a carpeta compartida → ejecutar setup.exe</li>
+                <li>Aceptar licencia, elegir instalación rápida o personalizada</li>
+                <li>Verificar instalación en Word o Excel</li>
+            </ul>
+        </div>
+
+        <!-- CARD 5 -->
+        <div class="card">
+            <h2>⚙ Características mínimas en equipo real</h2>
+            <ul>
+                <li>XP: RAM 128 MB, Disco 1.5 GB, CPU 233 MHz</li>
+                <li>Windows 7-10: RAM 1-2 GB, Disco 16-20 GB, CPU 1 GHz</li>
+                <li>Windows 11: RAM 4 GB, Disco 64 GB, CPU 1 GHz, 2 núcleos, TPM 2.0</li>
+                <li>Ubuntu: RAM 2 GB, Disco 25 GB, CPU 2 GHz dual-core</li>
+            </ul>
+        </div>
+
+        <!-- CARD 6 -->
+        <div class="card">
+            <h2>🛠 Pasos para instalación completa Windows</h2>
+            <ul>
+                <li>Preparar medio de instalación (USB/DVD)</li>
+                <li>Configurar arranque en BIOS/UEFI</li>
+                <li>Instalar Windows → seleccionar idioma → clave Product Key</li>
+                <li>Crear y formatear particiones → instalar sistema y controladores</li>
+                <li>Configurar usuario, red, actualizaciones y programas básicos</li>
+                <li>Optimización y entrega al cliente</li>
+            </ul>
+        </div>
+
+        <!-- QUIZ CORTO -->
+        <div class="card" id="quiz-container">
+            <h2>📝 Quiz Rápido</h2>
+            <p id="question"></p>
+            <div id="options"></div>
+            <p id="message"></p>
+        </div>
+    </div>
+
+    <!-- BOTONES -->
+    <div class="botones">
+        <a href="cuarto trabajo.pdf" target="_blank" class="boton">Abrir PDF</a>
+        <a href="index.html" class="boton">🏠 VOLVER</a>
+    </div>
+
+</div>
+
+<script>
+const quiz = [
+    {question:"¿Qué se requiere para instalar Windows 11?", options:["CPU 1 GHz, RAM 4 GB, TPM 2.0","CPU 500 MHz, RAM 512 MB","Solo USB","No necesita requisitos"], answer:0},
+    {question:"¿Qué se necesita instalar para compartir carpetas en VirtualBox?", options:["Guest Additions","Microsoft Office","Ningún software","Linux Kernel"], answer:0},
+    {question:"¿Cuál es una diferencia de instalación entre XP y Windows 10?", options:["XP usa modo texto, Windows 10 interfaz gráfica","XP usa interfaz gráfica, Windows 10 modo texto","No hay diferencia","XP es más rápido siempre"], answer:0}
+];
+
+let currentQuestion = 0;
+let score = 0;
+
+function loadQuestion() {
+    if(currentQuestion < quiz.length) {
+        const q = quiz[currentQuestion];
+        document.getElementById('question').innerText = q.question;
+        const optionsDiv = document.getElementById('options');
+        optionsDiv.innerHTML = "";
+        q.options.forEach((opt,index)=>{
+            const btn=document.createElement('button');
+            btn.innerText=opt;
+            btn.onclick=()=>checkAnswer(index);
+            optionsDiv.appendChild(btn);
+        });
+        document.getElementById('message').innerText="";
+    } else {
+        showScore();
+    }
+}
+
+function checkAnswer(selected) {
+    const q = quiz[currentQuestion];
+    const message = document.getElementById('message');
+    if(selected===q.answer){
+        message.style.color="#00ff00";
+        message.innerText="✅ Correcto!";
+        score++;
+    } else {
+        message.style.color="#ff4c4c";
+        message.innerText="❌ Incorrecto!";
+    }
+    currentQuestion++;
+    setTimeout(loadQuestion,1500);
+}
+
+function showScore() {
+    document.getElementById('question').innerText="🎉 ¡Quiz Terminado!";
+    const optionsDiv=document.getElementById('options');
+    optionsDiv.innerHTML=`<button onclick="restartGame()">Volver a jugar</button>`;
+    document.getElementById('message').innerText=`Tu puntuación: ${score} / ${quiz.length}`;
+}
+
+function restartGame(){
+    currentQuestion=0;
+    score=0;
+    loadQuestion();
+}
+
+// Iniciar quiz
+loadQuestion();
+</script>
+
+</body>
+</html>
+
+

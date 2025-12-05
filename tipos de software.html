@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tipos de software</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Poppins", sans-serif;
+            background: url('https://img.freepik.com/vector-premium/flecha-morada-cyber-circuit-futuro-concepto-tecnologia-fondo_42077-3849.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+        }
+
+        header {
+            text-align: center;
+            padding: 50px 20px;
+            background: rgba(0,0,0,0.3);
+            backdrop-filter: blur(10px);
+            border-bottom: 2px solid #9b59b6;
+            box-shadow: 0 0 25px #9b59b6;
+        }
+
+        h1 {
+            font-size: 3rem;
+            letter-spacing: 3px;
+            font-weight: 700;
+            color: #e4b8ff;
+            text-shadow: 0 0 10px #e4b8ff, 0 0 20px #c59bff, 0 0 30px #9b59b6;
+        }
+
+        /* 🔹 CONTENEDOR EN GRID – TARJETAS CUADRADAS */
+        .contenedor {
+            max-width: 1200px;
+            margin: auto;
+            padding: 40px 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        /* 🔹 TARJETA CUADRADA */
+        .card {
+            background: rgba(0,0,0,0.45);
+            padding: 25px;
+            border-radius: 20px;
+            backdrop-filter: blur(12px);
+            border: 4px solid #9b59b6;
+            box-shadow: 0 0 20px #c59bff, 0 0 40px #9b59b6;
+            transition: 0.3s;
+            min-height: 280px; /* <-- CUADRADA */
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 0 35px #c59bff, 0 0 50px #9b59b6, 0 0 70px #8e44ad;
+        }
+
+        .card h2 {
+            color: #e4b8ff;
+            font-size: 1.7rem;
+            margin-bottom: 15px;
+            text-shadow: 0 0 5px #e4b8ff;
+        }
+
+        .card p, .card ul {
+            font-size: 1.15rem;
+            line-height: 1.6;
+            text-shadow: 0 0 2px #c59bff;
+        }
+
+        ul {
+            margin-left: 20px;
+        }
+
+        /* 🔹 BOTONES */
+        .btn {
+            display: inline-block;
+            margin: 10px 5px;
+            padding: 12px 25px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            font-weight: 600;
+            background: #9b59b6;
+            color: #fff;
+            box-shadow: 0 0 10px #c59bff;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #c59bff;
+            box-shadow: 0 0 20px #e4b8ff;
+        }
+
+        /* 🔹 QUIZ CENTRADO → TARJETA CUADRADA TAMBIÉN */
+        #quiz-container {
+            grid-column: 1 / -1; /* ocupa el ancho total */
+            margin: 20px auto;
+            max-width: 500px;
+            min-height: 300px;
+            text-align: center;
+        }
+
+        #question {
+            font-size: 1.4rem;
+            color: #e4b8ff;
+            text-shadow: 0 0 5px #c59bff;
+        }
+
+        #options button {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        #message {
+            margin-top: 10px;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>TIPOS DE SOFTWARE Y SISTEMA DE ARCHIVOS</h1>
+</header>
+
+<div class="contenedor">
+
+    <!-- CAJÓN 1 -->
+    <div class="card">
+        <h2>🔒 Leyes que Protegen la Seguridad Informática en Colombia</h2>
+        <p><b>Ley 1273 de 2009:</b> protege la información y castiga delitos informáticos como acceso abusivo, daño informático, malware y violación de datos.</p>
+        <p><b>Ley 1581 de 2012:</b> regula el uso y protección de datos personales (habeas data).</p>
+    </div>
+
+    <!-- CAJÓN 2 -->
+    <div class="card">
+        <h2>💻 Software de Sistema</h2>
+        <p>Permite que el usuario interactúe con el hardware y que el equipo funcione correctamente.</p>
+        <ul>
+            <li>Incluye sistemas operativos y herramientas utilitarias.</li>
+            <li>Ejemplos: Windows, macOS y Linux.</li>
+        </ul>
+    </div>
+
+    <!-- CAJÓN 3 -->
+    <div class="card">
+        <h2>📱 Software de Aplicación</h2>
+        <p>Programas que permiten realizar tareas específicas para el usuario.</p>
+        <ul>
+            <li>Productividad: Word, Excel, PowerPoint.</li>
+            <li>Bases de datos: MySQL, Oracle.</li>
+            <li>Gráficos: Adobe Photoshop.</li>
+            <li>Redes sociales: Facebook, Twitter.</li>
+            <li>Música: Spotify.</li>
+        </ul>
+    </div>
+
+    <!-- CAJÓN 4 -->
+    <div class="card">
+        <h2>⚙️ Software de Programación</h2>
+        <p>Herramientas usadas para crear, editar y probar programas.</p>
+        <p>Funcionan como "traductores" entre el código escrito por humanos y el lenguaje que entiende el computador.</p>
+    </div>
+
+    <!-- CAJÓN 5 -->
+    <div class="card">
+        <h2>🗂️ FAT32 – Características</h2>
+        <ul>
+            <li>No permite archivos mayores a 4 GB.</li>
+            <li>Alta compatibilidad con casi todos los sistemas y dispositivos.</li>
+        </ul>
+    </div>
+
+    <!-- CAJÓN 6 -->
+    <div class="card">
+        <h2>🛡️ NTFS – Características</h2>
+        <ul>
+            <li>Incluye journaling para evitar pérdidas por fallos.</li>
+            <li>Manejo avanzado de permisos y seguridad (ACLs y cifrado).</li>
+        </ul>
+    </div>
+
+    <!-- CAJÓN 7 -->
+    <div class="card">
+        <h2>💾 exFAT – Características</h2>
+        <ul>
+            <li>Permite archivos extremadamente grandes (hasta 128 PB).</li>
+            <li>Optimizado para memorias USB y tarjetas SD.</li>
+        </ul>
+    </div>
+
+    <!-- QUIZ CENTRADO -->
+    <div class="card" id="quiz-container">
+        <h2>📝 Quiz Interactivo</h2>
+        <p id="question"></p>
+        <div id="options"></div>
+        <p id="message"></p>
+        <button class="btn" onclick="openPDF()">📄 ABRIR PDF</button>
+        <button class="btn" onclick="goHome()">🏠 VOLVER</button>
+    </div>
+
+</div>
+
+<script>
+const quiz = [
+    {question:"¿Cuál de estas NO es una ventaja de los sistemas operativos?", options:["Permite multitarea eficiente","Aumenta la seguridad de la memoria","Hace el café automáticamente ☕","Alta compatibilidad con hardware"], answer:2},
+    {question:"¿Cuál es una ventaja económica de los sistemas operativos?", options:["Impulso a la industria del software","Hace tareas de cocina","Reduce la velocidad del computador","Cambia la memoria RAM automáticamente"], answer:0},
+    {question:"¿Cuál es una ventaja en eficiencia de los sistemas operativos?", options:["Detecta errores y mantiene estabilidad","Aumenta el consumo de energía","Bloquea todas las aplicaciones","Genera café automáticamente"], answer:0}
+];
+
+let currentQuestion = 0;
+let score = 0;
+
+function loadQuestion() {
+    if(currentQuestion < quiz.length) {
+        const q = quiz[currentQuestion];
+        document.getElementById('question').innerText = q.question;
+        const optionsDiv = document.getElementById('options');
+        optionsDiv.innerHTML = "";
+        q.options.forEach((opt, index)=>{
+            const btn = document.createElement('button');
+            btn.innerText = opt;
+            btn.className = "btn";
+            btn.onclick = ()=>checkAnswer(index);
+            optionsDiv.appendChild(btn);
+        });
+        document.getElementById('message').innerText = "";
+    } else {
+        showScore();
+    }
+}
+
+function checkAnswer(selected) {
+    const q = quiz[currentQuestion];
+    const message = document.getElementById('message');
+    if(selected===q.answer){
+        message.style.color="#00ff00";
+        message.innerText="🎉 Correcto!";
+        score++;
+    } else {
+        message.style.color="#ff4c4c";
+        message.innerText="❌ Incorrecto.";
+    }
+    currentQuestion++;
+    setTimeout(loadQuestion,1500);
+}
+
+function showScore() {
+    document.getElementById('question').innerText="✅ ¡Quiz terminado!";
+    const optionsDiv=document.getElementById('options');
+    optionsDiv.innerHTML=`<button class="btn" onclick="restartGame()">Volver a jugar</button>`;
+    document.getElementById('message').innerText=`Tu puntuación: ${score} / ${quiz.length} 🎉`;
+}
+
+function restartGame(){
+    currentQuestion=0;
+    score=0;
+    loadQuestion();
+}
+
+function openPDF() {
+    window.open('segundo trabajo.pdf', '_blank'); 
+}
+
+function goHome() {
+    window.location.href='index.html'; 
+}
+
+loadQuestion();
+</script>
+
+</body>
+</html>

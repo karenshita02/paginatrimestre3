@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistemas Operativos – Ventajas y Clasificación</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Poppins", sans-serif;
+            background: url('https://img.freepik.com/vector-gratis/fondo-neon-placa-circuito_23-2148335792.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+        }
+
+        header {
+            text-align: center;
+            padding: 50px 20px;
+            background: rgba(0,0,0,0.5);
+            backdrop-filter: blur(8px);
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+        }
+
+        h1 {
+            font-size: 3rem;
+            letter-spacing: 3px;
+            font-weight: 700;
+            text-shadow: 0 0 25px rgba(255,255,255,0.8);
+        }
+
+        /* CONTENEDOR EN CUADRÍCULA */
+        .contenedor {
+            max-width: 1100px;
+            margin: auto;
+            padding: 40px 20px;
+
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+        }
+
+        /* TARJETAS */
+        .card {
+            background: rgba(0, 0, 0, 0.35);
+            padding: 35px;
+            border-radius: 20px;
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(0,255,255,0.4);
+            box-shadow: 0 0 25px rgba(0,255,255,0.3);
+            transition: 0.35s ease-in-out;
+        }
+
+        .card:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 0 35px rgba(0,255,255,0.75);
+            border: 1px solid cyan;
+        }
+
+        .card h2 {
+            font-size: 2rem;
+            color: cyan;
+            margin-bottom: 15px;
+            text-shadow: 0 0 12px cyan;
+        }
+
+        .card ul, .card p, .card li {
+            font-size: 1.15rem;
+            line-height: 1.6;
+        }
+
+        .card ul {
+            margin-left: 20px;
+        }
+
+        /* QUIZ */
+        #options button, .btn {
+            display: inline-block;
+            margin: 10px;
+            padding: 12px 25px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: 0.3s;
+            background: cyan;
+            color: #000;
+            font-weight: 600;
+            box-shadow: 0 0 10px cyan;
+        }
+
+        #options button:hover, .btn:hover {
+            background: white;
+            box-shadow: 0 0 20px white;
+            transform: scale(1.05);
+        }
+
+        #message {
+            margin-top: 15px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        /* BOTONES CENTRADOS */
+        .botones-finales {
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 40px;
+        }
+
+        .botones-finales button {
+            margin: 10px 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>VENTAJAS Y CLASIFICACIÓN DE LOS SISTEMAS OPERATIVOS</h1>
+</header>
+
+<!-- TARJETAS EN CUADRÍCULA -->
+<div class="contenedor">
+
+    <div class="card">
+        <h2>🌟 Ventajas en el Uso</h2>
+        <ul>
+            <li>Uso fácil sin necesidad de conocimientos técnicos profundos.</li>
+            <li>Permiten multitarea eficiente.</li>
+            <li>Control de permisos y protección de memoria aumenta la seguridad.</li>
+            <li>Alta compatibilidad con distintos hardware gracias a su evolución.</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>💰 Ventajas en Economía</h2>
+        <ul>
+            <li>Acceso masivo a computadoras personales.</li>
+            <li>Impulso a la industria del software y competencia en hardware.</li>
+            <li>Alternativas gratuitas y de código abierto (como Linux).</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>⚙️ Ventajas en Eficiencia</h2>
+        <ul>
+            <li>Memoria virtual y paginación mejoran el uso de recursos.</li>
+            <li>Sistemas modernos detectan errores, mantienen estabilidad y evitan fallos.</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>🖥️ Sistemas Operativos de Escritorio</h2>
+        <ul>
+            <li><b>Windows:</b> 7, 8, 10, 11</li>
+            <li><b>macOS:</b> Mojave, Catalina, Big Sur, Ventura, Sonoma</li>
+            <li><b>Linux:</b> Ubuntu, Debian, Fedora, etc.</li>
+            <li><b>Chrome OS:</b> Enfocado a la nube</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>🏢 Sistemas de Servidor / Empresariales</h2>
+        <ul>
+            <li><b>Windows Server</b></li>
+            <li><b>Distribuciones Linux Server</b></li>
+            <li><b>UNIX y derivados</b></li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>📱 Sistemas Móviles</h2>
+        <ul>
+            <li><b>Android</b></li>
+            <li><b>iOS</b></li>
+            <li><b>iPadOS, watchOS, tvOS</b></li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>⏱️ Sistemas en Tiempo Real (RTOS)</h2>
+        <ul>
+            <li>FreeRTOS, VxWorks, QNX, RTLinux</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>🔌 Sistemas Embebidos / IoT</h2>
+        <ul>
+            <li>Embedded Linux, Windows IoT, microcontroladores, etc.</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>🌐 Sistemas Distribuidos / en Red</h2>
+        <ul>
+            <li>Clusters, grid computing, plataformas de orquestación</li>
+        </ul>
+    </div>
+
+    <div class="card" style="grid-column: span 2;">
+        <h2>📝 Quiz de Sistemas Operativos</h2>
+        <p id="question"></p>
+        <div id="options"></div>
+        <p id="message"></p>
+    </div>
+
+</div>
+
+<!-- BOTONES CENTRADOS -->
+<div class="botones-finales">
+    <button class="btn" onclick="openPDF()">📄 ABRIR PDF</button>
+    <button class="btn" onclick="goHome()">🏠 VOLVER</button>
+</div>
+
+<script>
+const quiz = [
+    {question:"¿Cuál de estas NO es una ventaja de los sistemas operativos?", options:["Permite multitarea eficiente","Aumenta la seguridad de la memoria","Hace el café automáticamente ☕","Alta compatibilidad con hardware"], answer:2},
+    {question:"¿Cuál es una ventaja económica de los sistemas operativos?", options:["Impulso a la industria del software","Hace tareas de cocina","Reduce la velocidad del computador","Cambia la memoria RAM automáticamente"], answer:0},
+    {question:"¿Cuál es una ventaja en eficiencia de los sistemas operativos?", options:["Detecta errores y mantiene estabilidad","Aumenta el consumo de energía","Bloquea todas las aplicaciones","Genera café automáticamente"], answer:0}
+];
+
+let currentQuestion = 0;
+let score = 0;
+
+function loadQuestion() {
+    if(currentQuestion < quiz.length) {
+        const q = quiz[currentQuestion];
+        document.getElementById('question').innerText = q.question;
+        const optionsDiv = document.getElementById('options');
+        optionsDiv.innerHTML = "";
+        q.options.forEach((opt, index)=>{
+            const btn = document.createElement('button');
+            btn.innerText = opt;
+            btn.onclick = ()=>checkAnswer(index);
+            optionsDiv.appendChild(btn);
+        });
+        document.getElementById('message').innerText = "";
+    } else {
+        showScore();
+    }
+}
+
+function checkAnswer(selected) {
+    const q = quiz[currentQuestion];
+    const message = document.getElementById('message');
+    if(selected===q.answer){
+        message.style.color="#00ff00";
+        message.innerText="🎉 Correcto!";
+        score++;
+    } else {
+        message.style.color="#ff4c4c";
+        message.innerText="❌ Incorrecto.";
+    }
+    currentQuestion++;
+    setTimeout(loadQuestion,1500);
+}
+
+function showScore() {
+    document.getElementById('question').innerText="✅ ¡Quiz terminado!";
+    const optionsDiv=document.getElementById('options');
+    optionsDiv.innerHTML=`<button class="btn" onclick="restartGame()">Volver a jugar</button>`;
+    document.getElementById('message').innerText=`Tu puntuación: ${score} / ${quiz.length} 🎉`;
+}
+
+function restartGame(){
+    currentQuestion=0;
+    score=0;
+    loadQuestion();
+}
+
+function openPDF() {
+    window.open('tercer trabajo.pdf', '_blank'); 
+}
+
+function goHome() {
+    window.location.href='index.html'; 
+}
+
+loadQuestion();
+</script>
+
+</body>
+</html>
